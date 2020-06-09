@@ -365,22 +365,22 @@ footer h3 {
 }
 
 .footer__social-twitter {
-  background-image: url(/img/ico/twitter-icon.svg);
+  background-image: url("../img/ico/twitter-icon.svg");
 }
 .footer__social-twitter:hover {
-  background-image: url(/img/ico/twitter-icon-white.svg);
+  background-image: url("../img/ico/twitter-icon-white.svg");
 }
 .footer__social-facebook {
-  background-image: url(/img/ico/facebook-icon.svg);
+  background-image: url("../img/ico/facebook-icon.svg");
 }
 .footer__social-facebook:hover {
-  background-image: url(/img/ico/facebook-icon-white.svg);
+  background-image: url("../img/ico/facebook-icon-white.svg");
 }
 .footer__social-instagram {
-  background-image: url(/img/ico/instagram-icon.svg);
+  background-image: url("../img/ico/instagram-icon.svg");
 }
 .footer__social-instagram:hover {
-  background-image: url(/img/ico/instagram-icon-white.svg);
+  background-image: url("../img/ico/instagram-icon-white.svg");
 }
 
 @media only screen and (min-width: 1024px) {
