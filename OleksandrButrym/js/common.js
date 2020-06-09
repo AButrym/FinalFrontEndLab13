@@ -11,7 +11,9 @@ function onSearchBtnClick() {
     if (!searchString) {
       searchInput.classList.add('hidden');
     } else {
-      const url = new URL(`${window.location.origin}/category-all.html`);
+      let pathTokens = window.location.pathname.split('/');
+      pathTokens[pathTokens.length - 1] = 'category-all.html';
+      const url = new URL(window.location.origin + pathTokens.join('/'));
       url.searchParams.append('q', searchString);
       window.location.assign(url.toString());
     }
