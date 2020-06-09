@@ -39,7 +39,11 @@ body {
 .body-wrap {
   background-color: #fff;
   max-width: 1240px;
-  min-width: 414px;;
+  min-width: 414px;
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
 }
 
 /*************** header *****************/
@@ -308,6 +312,18 @@ body {
   text-transform: unset;
   font-weight: bold;
   margin-top: 20px;
+}
+
+/************** thankyou ****************/
+.thankyou {
+  text-align: center;
+}
+.thankyou h1 {
+  font: 92px/92px Lato, sans-serif; /*psd uses "Myriad Pro"*/
+  margin: 0.5em auto;
+}
+.thankyou p {
+  font: italic 30px/30px Georgia, sans-serif; /*psd uses "Myriad Pro"*/
 }
 
 /************** lookbook ****************/
