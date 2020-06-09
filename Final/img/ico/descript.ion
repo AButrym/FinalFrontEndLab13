@@ -1,2 +1,0 @@
-twitter-icon.svg .social-item--twitter::before {\n    content: '';\n    background: url("/Content/themes/Redesign/ico/twitter-icon.svg") no-repeat;\n        background-size: auto;\n    background-size: contain;\n    width: 18px;\n    height: 18px;\n}Â
-facebook-icon.svg .social-item--facebook::before {\n    content: '';\n    background: url("/Content/themes/Redesign/ico/facebook-icon.svg") no-repeat;\n        background-size: auto;\n    background-size: contain;\n    width: 12px;\n    height: 24px;\n}Â

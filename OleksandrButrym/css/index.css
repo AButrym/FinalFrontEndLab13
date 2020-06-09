@@ -1,0 +1,458 @@
+/*************** reset *****************/
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+
+a {
+  text-decoration: none;
+  color: inherit;
+}
+
+button.btn:focus {
+  outline-width: 0;
+}
+
+/*************** common *****************/
+h1, h2, h3 {
+  text-transform: uppercase;
+}
+
+html {
+  font-family: Lato, sans-serif;
+  font-size: 14px;
+  line-height: 22px;
+  color: #303030;
+}
+
+.btn {
+  transition: all 0.2s ease;
+}
+.btn:active {
+  transform: scale(0.95);
+  opacity: 0.8;
+}
+
+/**************** body ******************/
+body {
+  background-color:#e5e5e5;
+}
+
+.body-wrap {
+  background-color: #fff;
+  max-width: 1240px;
+  min-width: 414px;
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+
+/*************** header *****************/
+.header {
+  padding-bottom: 35px;
+  border-bottom: 1px solid #e5e5e5;
+}
+
+.header__logo {
+  background-color: #222;
+  color: white;
+  text-align: center;
+}
+
+.header nav a {
+  display: inline-block;
+  margin-left: 50px;
+}
+
+.header nav a:hover {
+  text-decoration: underline;
+  opacity: 0.8;
+}
+
+.header nav a,
+.header__basket {
+  height: 40px;
+  line-height: 40px;
+}
+
+.header__basket::before {
+  content: "";
+  display: inline-block;
+  width: 17px;
+  height: 17px;
+  margin: 0 5px -3px 20px;
+  background-image: url(../img/ico/basket.svg);
+  background-size: contain;
+  background-position: center;
+  background-repeat: no-repeat;
+}
+
+.header__basket:hover {
+  text-decoration: underline;
+  opacity: 0.8;
+  transition: 0.3s ease;
+}
+
+.header__search-btn {
+  width: 40px;
+  height: 40px;
+  background-color: #fff;
+  border: 1px solid #959595;
+  transition: all 0.2s ease;
+}
+.header__search-btn svg {
+  fill: #606060;
+}
+
+.header__search-btn:hover {
+  background-color: #606060;
+}
+.header__search-btn:hover svg {
+  fill: #fff;
+}
+
+.header__search-box .hidden {
+  width: 0;
+  padding: 0;
+  border: none;
+}
+
+.header__search-input {
+  vertical-align: top;
+  height: 40px;
+  border: 1px solid #959595;
+  padding: 0 10px;
+  width: 170px;
+  transition: all 0.7s ease;
+  font-size: 12px;
+  font-style: italic;
+}
+/************  breadcrumbs  **************/
+.breadcrumbs {
+  margin: 30px 0 60px;
+}
+.breadcrumbs h2 {
+  font-size: 12px;
+  word-spacing: 0.5em;
+}
+
+/***************  hero  *****************/
+.hero h1 {
+  font-weight: normal;
+  font-size: 72px;
+  line-height: 72px;
+  text-align: center;
+  margin-top: 150px;
+  margin-bottom: 20px;
+}
+
+.hero p {
+  font-family: Georgia, serif;
+  font-style: italic;
+  font-size: 24px;
+  text-align: center;
+}
+
+.hero__btn {
+  display: block;
+  width: 230px;
+  margin: 70px auto 150px;
+  height: 60px;
+  line-height: 60px;
+  background-color: #fff;
+  border: 1px solid #959595;
+  text-align: center;
+}
+
+.hero__btn:hover {
+  background-color: #606060;
+  color: #fff;
+}
+
+/*************** mosaic *****************/
+.mosaic {
+  display: grid;
+  grid-template-rows: 1fr 1fr;
+  grid-template-columns: repeat(4, 1fr);
+  grid-gap: 0;
+}
+.mosaic__item-wrap {
+  position: relative;
+  width: 100%;
+  border: 1px solid #e0e0e0;
+  background-color: #dbdbdb;
+}
+.mosaic img {
+  display: block;
+  max-width: 100%;
+}
+.mosaic > *:nth-of-type(-2n+4),
+.mosaic > *:nth-of-type(2n+5) {
+  background-color: #606060;
+}
+.mosaic > *:nth-of-type(-2n+4)::before,
+.mosaic > *:nth-of-type(2n+5)::before {
+  content: "ELEGANT\00a0SHOES"; /* \00a0 = &nbsp; */
+  z-index: 1;
+  font-weight: bold;
+  font-size: 24px;
+  color: #fff;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -125%);
+}
+.mosaic > *:nth-of-type(-2n+4)::after,
+.mosaic > *:nth-of-type(2n+5)::after {
+  content: "BRAIDED\00a0LEATHER"; /* \00a0 = &nbsp; */
+  z-index: 1;
+  font-style: italic;
+  font-size: 18px;
+  font-family: Georgia, serif;;
+  color: #fff;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, 25%);
+}
+
+/*************** signup *****************/
+.signup h2 {
+  font-weight: bold;
+  font-size: 36px;
+  text-align: center;
+  margin-top: 135px;
+  margin-bottom: 20px;
+}
+.signup p {
+  font-family: Georgia, serif;
+  font-style: italic;
+  font-size: 18px;
+  text-align: center;
+}
+.signup__form {
+  width: 50%;
+  min-width: 375px;
+  margin: 55px auto 75px;
+}
+.signup__button {
+  color: #fff;
+  background-color: #f68236;
+  line-height: 55px;
+  height: 55px;
+  width: 20%;
+  text-align: center;
+  border: none;
+  transition: all 0.2s ease;
+}
+.signup__button:hover {
+  background-color: #717171;
+}
+.signup__form input {
+  line-height: 55px;
+  height: 55px;
+  width: 80%;
+  text-align: left;
+  padding-left: 15px;
+  font-style: italic;
+  border: 1px solid #959595;
+}
+
+/************** category ****************/
+.category {
+  padding-bottom: 65px;
+  border-bottom: 1px solid #e5e5e5;
+  text-align: center;
+}
+
+.category h1 {
+  font-size: 36px;
+  line-height: 1em;
+  margin-top: 60px;
+  margin-bottom: 100px;
+}
+
+.category__wraper {
+  display: flex;
+  justify-content: space-between;
+}
+
+.category__product {
+  width: 210px;
+  height: 315px;
+}
+
+.category__image-container {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 256px;
+  border: 1px solid #e5e5e5;
+}
+
+.category__image-container img {
+  max-height: 254px;
+  max-width: 100%;
+  display: block;
+}
+
+.category__product-name {
+  text-transform: unset;
+  font-weight: bold;
+  margin-top: 20px;
+}
+
+/************** thankyou ****************/
+.thankyou {
+  text-align: center;
+}
+.thankyou h1 {
+  font: 92px/92px Lato, sans-serif; /*psd uses "Myriad Pro"*/
+  margin: 0.5em auto;
+}
+.thankyou p {
+  font: italic 30px/30px Georgia, sans-serif; /*psd uses "Myriad Pro"*/
+}
+
+/************** lookbook ****************/
+.lookbook h2 {
+  text-transform: unset;
+  font-family: Georgia, serif;
+  font-style: italic;
+  font-weight: normal;
+  font-size: 24px;
+  margin: 50px auto 60px;
+  text-align: center;
+}
+
+.lookbook__wraper {
+  display: grid;
+  grid-template-columns: 40px 1fr 40px;
+  grid-template-rows: 120px;
+  margin-bottom: 60px;
+  background-color: #bbb;
+  border-top: 1px solid #959595;
+  border-bottom: 1px solid #959595;
+}
+
+.lookbook__container {
+  display: flex;
+  align-content: space-between;
+  overflow: hidden;
+}
+
+.lookbook button {
+  border: none;
+}
+.lookbook button:hover {
+  box-shadow: 0 0 3px #222;
+}
+
+
+/*************** footer *****************/
+footer {
+  display: flex;
+  justify-content: space-between;
+  font-size: 12px;
+}
+
+footer a {
+  display: block;
+  height: 2em;
+}
+
+footer > div:not(:first-of-type) {
+  padding-left: 15px;
+  border-left: 1px solid #eaeaea;
+}
+
+footer h3 {
+  font-weight: bold;
+  line-height: 35px;
+  letter-spacing: 1.5px;
+  margin-bottom: 0.5em;
+}
+
+.footer__social address {
+  font-style: normal;
+}
+
+.footer__social-icons a {
+  display: inline-block;
+  width: 32px;
+  height: 32px;
+  border: 1px solid #606060;
+  background-repeat: no-repeat;
+  background-position: center;
+  transition: all 0.3s ease;  
+}
+
+.footer__social-icons a:hover {
+  background-color: #606060;
+}
+
+.footer__social-twitter {
+  background-image: url("../img/ico/twitter-icon.svg");
+}
+.footer__social-twitter:hover {
+  background-image: url("../img/ico/twitter-icon-white.svg");
+}
+.footer__social-facebook {
+  background-image: url("../img/ico/facebook-icon.svg");
+}
+.footer__social-facebook:hover {
+  background-image: url("../img/ico/facebook-icon-white.svg");
+}
+.footer__social-instagram {
+  background-image: url("../img/ico/instagram-icon.svg");
+}
+.footer__social-instagram:hover {
+  background-image: url("../img/ico/instagram-icon-white.svg");
+}
+
+@media only screen and (min-width: 1024px) {
+  .body-wrap {
+    padding: 30px;
+    margin: 0 auto;
+  }
+
+  .header__logo,
+  .header nav {
+    float: left;
+  }
+
+  .header__basket,
+  .header__search-box {
+    float: right;
+  }
+
+  .header::after {
+    content: "";
+    display: table;
+    clear: both;
+  }
+
+  .header__logo {
+    width: 42px;
+    padding: 10px 0;
+  }
+
+  .footer__social address {
+    margin-bottom: 1em;
+  }
+}
+
+@media only screen and (max-width: 1023px) {
+  footer > div:not(.footer__social) {
+    display: none;
+  }
+  .footer__social-icons {
+    text-align: center;
+    word-spacing: 16px;
+  }
+}
+
+@media only screen and (max-width: 767px) {
+}
