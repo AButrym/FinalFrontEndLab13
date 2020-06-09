@@ -140,7 +140,7 @@ body {
 }
 /************  breadcrumbs  **************/
 .breadcrumbs {
-  margin: 30px 0 70px;
+  margin: 30px 0 60px;
 }
 .breadcrumbs h2 {
   font-size: 12px;
@@ -270,11 +270,14 @@ body {
 .category {
   padding-bottom: 65px;
   border-bottom: 1px solid #e5e5e5;
+  text-align: center;
 }
 
 .category h1 {
   font-size: 36px;
-  margin-top: 85px;
+  line-height: 1em;
+  margin-top: 60px;
+  margin-bottom: 100px;
 }
 
 .category__wraper {
@@ -285,6 +288,26 @@ body {
 .category__product {
   width: 210px;
   height: 315px;
+}
+
+.category__image-container {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 256px;
+  border: 1px solid #e5e5e5;
+}
+
+.category__image-container img {
+  max-height: 254px;
+  max-width: 100%;
+  display: block;
+}
+
+.category__product-name {
+  text-transform: unset;
+  font-weight: bold;
+  margin-top: 20px;
 }
 
 /************** lookbook ****************/
