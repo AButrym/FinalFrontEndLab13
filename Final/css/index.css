@@ -181,9 +181,12 @@ body {
 .mosaic__item-wrap {
   position: relative;
   width: 100%;
-  padding-top: 100%;
   border: 1px solid #e0e0e0;
   background-color: #dbdbdb;
+}
+.mosaic img {
+  display: block;
+  max-width: 100%;
 }
 .mosaic > *:nth-of-type(-2n+4),
 .mosaic > *:nth-of-type(2n+5) {
