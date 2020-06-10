@@ -1,1 +1,1 @@
-// add products to purchase list kept in local storage
+// add products to purchase list are kept in local storage

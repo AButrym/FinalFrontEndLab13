@@ -1,3 +1,14 @@
+/******** initialize Basket counter ********/
+const basket = document.getElementById('basket-counter');
+if (basket) {
+  const chosenGoods = JSON.parse(window.localStorage.getItem('chosenGoods'));
+  let countItems = 0;
+  for (const item in chosenGoods) {
+    countItems += chosenGoods[item].quantity;
+  }
+  basket.innerText = '' + countItems;
+}
+
 /******** search box in the header ********/
 const searchBtn = document.querySelector('.header__search-btn');
 const searchInput = document.querySelector('.header__search-input');
