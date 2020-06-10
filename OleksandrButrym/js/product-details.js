@@ -32,5 +32,5 @@ btnAdd.addEventListener('click', () => {
     };
   }
   basketLive.textContent = 1 + Number(basketLive.textContent);
+  window.localStorage.setItem('chosenGoods', JSON.stringify(chosenGoodsLive));
 });
-
