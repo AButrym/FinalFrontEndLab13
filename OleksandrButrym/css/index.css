@@ -34,6 +34,19 @@ html {
   opacity: 0.8;
 }
 
+.btn-highlighted {
+    color: #fff;
+    background-color: #f68236;
+    line-height: 55px;
+    height: 55px;
+    text-align: center;
+    border: none;
+    transition: all 0.2s ease;
+  }
+.btn-highlighted:hover {
+  background-color: #717171;
+}
+
 /**************** body ******************/
 body {
   background-color:#e5e5e5;
@@ -238,17 +251,7 @@ body {
   margin: 55px auto 75px;
 }
 .signup__button {
-  color: #fff;
-  background-color: #f68236;
-  line-height: 55px;
-  height: 55px;
   width: 20%;
-  text-align: center;
-  border: none;
-  transition: all 0.2s ease;
-}
-.signup__button:hover {
-  background-color: #717171;
 }
 .signup__form input {
   line-height: 55px;
@@ -304,6 +307,99 @@ body {
   margin-top: 20px;
 }
 
+/*************** details *****************/
+.details {
+  text-align: center;
+  border-bottom: 1px solid #e5e5e5;
+  padding-bottom: 75px;
+}
+.details__picture {
+  display: flex;
+  flex-direction: column-reverse;
+  align-items: flex-end;
+  height: 590px;
+  width: 100%;
+  background-color: #fafafa;
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: contain;
+}
+.details__picture > div {
+  width: 72px;
+  height: 72px;
+  border: 1px solid #fafafa;
+  margin-top: 10px;
+  background-color: #f7f7f7;
+  opacity: 0.5;
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: contain;
+  cursor: pointer;
+  transition: all 0.2 ease;
+}
+.details__picture > div:hover {
+  opacity: 1;
+  border-color: #606060;
+}
+
+.details h1 {
+  margin-top: 65px;
+  font-size: 36px;
+  line-height: 44px;
+  font-weight: bold;
+}
+.details__article {
+  margin-top: 1em;
+  font-style: italic;
+}
+.details__price {
+  font: italic 18px/36px Georgia, serif;
+}
+.details__description {
+  max-width: 600px;
+  margin: auto;
+}
+.details__choose-size h3 {
+  font-size: 14px;
+  margin: 35px auto 40px;
+}
+/* .details__available-sizes label {
+  display: inline-block;
+  position: relative;
+  width: 37px;
+  height: 37px;
+  line-height: 35px;
+  border: 1px solid #959595;
+  margin: 0 5px 40px;
+} */
+.details__size {
+  margin: 0 5px 40px;
+}
+.details__size,
+.details__size::before {
+  display: inline-block;
+  width: 37px;
+  height: 37px;
+  line-height: 37px;
+  transition: all 0.2s ease;
+}
+.details__size::before {
+  content: attr(value);
+  background-color: #fff;
+  text-align: center;
+  border: 1px solid #959595;
+  cursor: pointer;
+}
+.details__size:checked::before {
+  color: #fff;
+  background-color: #606060;
+}
+
+.details__btn-add {
+  width: 190px;
+}
+
+
 /************** thankyou ****************/
 .thankyou {
   text-align: center;
@@ -331,7 +427,7 @@ body {
   display: grid;
   grid-template-columns: 40px 1fr 40px;
   grid-template-rows: 120px;
-  margin-bottom: 60px;
+  margin: 50px 0;
   background-color: #bbb;
   border-top: 1px solid #959595;
   border-bottom: 1px solid #959595;
