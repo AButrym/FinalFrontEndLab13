@@ -36,7 +36,41 @@
         <section class="shopping-bag">
             <h1>YOUR SHOPPING BAG</h1>
             <p class="shopping-bag__reservation-warn">Items reserved for limited time only</p>
+            <table class="shopping-bag__table">
+                <colgroup>
+                    <col class="shopping-bag__product-col" />
+                    <col class="shopping-bag__description-col" />
+                    <col class="shopping-bag__color-col" />
+                    <col class="shopping-bag__size-col" />
+                    <col class="shopping-bag__qty-col" />
+                    <col class="shopping-bag__amount-col" />
+                </colgroup>
+                <thead>
+                    <tr>
+                        <th>PRODUCT</th>
+                        <th>DESCRIPTION</th>
+                        <th>COLOR</th>
+                        <th>SIZE</th>
+                        <th>QTY</th>
+                        <th>AMOUNT</th>
+                    </tr>
+                </thead>
+                <tbody class="shopping-bag__table-body">
+
+                </tbody>
+            </table>
         </section>
+        
+        <template id="product-row">
+            <tr>
+                <td></td>
+                <td></td>
+                <td></td>
+                <td></td>
+                <td></td>
+                <td></td>
+            </tr>
+        </template>
         
     </main>
     <footer>

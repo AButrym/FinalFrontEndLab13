@@ -394,6 +394,7 @@ body {
 .shopping-bag {
   text-align: center;
   margin: 50px auto;
+  min-height: 50vh;
 }
 .shopping-bag h1 {
   font-size: 36px;
@@ -401,6 +402,37 @@ body {
 }
 .shopping-bag__reservation-warn {
   font: italic 18px/18px Georgia, serif;
+  margin-bottom: 95px;;
+}
+.shopping-bag__table {
+  width: 100%;
+}
+.shopping-bag__table th {
+  font: 14px/14px "Lato Light", Lato, sans-serif;
+  padding-bottom: 1em;
+}
+.shopping-bag__table th,
+.shopping-bag__table td {
+  border-bottom: 1px solid #e5e5e5;
+  text-align: left;
+}
+
+.shopping-bag__product-col,
+.shopping-bag__size-col,
+.shopping-bag__qty-col,
+.shopping-bag__amount-col {
+  width: 100px;
+}
+.shopping-bag__color-col {
+  max-width: 160px;
+  min-width: 100px;
+  width: 15%;
+}
+.shopping-bag__product-photo {
+  width: 100px;
+  height: 100px;
+  background-color: #eaeaea;
+  border: 1px solid #e5e5e5;
 }
 
 /************** thankyou ****************/

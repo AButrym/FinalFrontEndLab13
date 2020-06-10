@@ -17,18 +17,18 @@ for (const el of productMiniatures) {
 
 const btnAdd = document.querySelector('.details__btn-add');
 const basketLive = document.querySelector('#basket-counter');
-console.log(basketLive);
 
 btnAdd.addEventListener('click', () => {
   const currentItem = document.querySelector('.details__article-number').textContent;
   const chosenSize = document.querySelector('.details__size:checked').getAttribute('value');
   if (currentItem in chosenGoodsLive) {
-    chosenGoodsLive[currentItem].sizes.push(chosenSize);
+    const old = chosenGoodsLive[currentItem].sizes[chosenSize] || 0;
+    chosenGoodsLive[currentItem].sizes[chosenSize] = old + 1;
   } else {
     chosenGoodsLive[currentItem] = {
       price: document.querySelector('.details__price').textContent,
       name: document.querySelector('.details__product-name').textContent,
-      sizes: [chosenSize]
+      sizes: {chosenSize: 1}
     };
   }
   basketLive.textContent = 1 + Number(basketLive.textContent);

@@ -1,10 +1,12 @@
 /******** initialize Basket counter ********/
 const basket = document.getElementById('basket-counter');
 if (basket) {
-  const chosenGoods = JSON.parse(window.localStorage.getItem('chosenGoods'));
+  const chosenGoods = JSON.parse(window.localStorage.getItem('chosenGoods') || '{}');
   let countItems = 0;
-  for (const item in chosenGoods) {
-    countItems += chosenGoods[item].sizes.length;
+  for (const item of Object.values(chosenGoods)) {
+    for (const quantity of Object.values(item.sizes)) {
+      countItems += quantity;
+    }
   }
   basket.innerText = '' + countItems;
 }
