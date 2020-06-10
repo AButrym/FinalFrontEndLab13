@@ -4,7 +4,7 @@ if (basket) {
   const chosenGoods = JSON.parse(window.localStorage.getItem('chosenGoods'));
   let countItems = 0;
   for (const item in chosenGoods) {
-    countItems += chosenGoods[item].quantity;
+    countItems += chosenGoods[item].sizes.length;
   }
   basket.innerText = '' + countItems;
 }

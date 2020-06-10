@@ -342,7 +342,7 @@ body {
   border-color: #606060;
 }
 
-.details h1 {
+.details__product-name {
   margin-top: 65px;
   font-size: 36px;
   line-height: 44px;
@@ -363,15 +363,6 @@ body {
   font-size: 14px;
   margin: 35px auto 40px;
 }
-/* .details__available-sizes label {
-  display: inline-block;
-  position: relative;
-  width: 37px;
-  height: 37px;
-  line-height: 35px;
-  border: 1px solid #959595;
-  margin: 0 5px 40px;
-} */
 .details__size {
   margin: 0 5px 40px;
 }
